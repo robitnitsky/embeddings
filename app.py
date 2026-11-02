@@ -123,4 +123,10 @@ fig = px.scatter_3d(
     opacity=0.8,
 )
 fig.update_traces(marker_size=3)
+
+# Самодостатній інтерактивний HTML-файл, яким можна поділитись
+OUTPUT_HTML = "embeddings_3d.html"
+fig.write_html(OUTPUT_HTML, include_plotlyjs=True)
+print(f"3D візуалізацію збережено: {OUTPUT_HTML}")
+
 fig.show()
